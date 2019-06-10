@@ -1,0 +1,213 @@
+@import 'config';
+@import 'menu';
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    @include background();
+    background: $primary-color;
+    color: text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(darken($primary-color, 6), 0.3);
+    }
+}
+
+a {
+    color: #bbbbbb;
+    text-decoration: none;
+}
+
+header {
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+main {
+    padding: 4rem;
+    height: 100%;
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeIn();
+            }
+        }
+    }
+
+    &#home {
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
+
+// about page
+.about-info {
+    display: grid; 
+    grid-gap: 30px;
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+  
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border: $secondary-color 1px solid;
+  }
+  
+  .bio {
+    grid-area: bio;
+    font-size: 1.2rem;
+  }
+
+  .job {
+      background: darken($primary-color, 2);
+      padding: 0.5rem;
+      box-shadow: 1px 1px 10px #cccccc;
+      @include easeIn();
+
+      &:hover {
+          background: lighten($primary-color, 1);
+          border-bottom: $secondary-color 3px solid;
+      }
+
+    .mybuttonoverlap{
+        position: inherit;
+        background: transparent;
+        height: 30px;
+        color: text-color($primary-color);
+        border:  1px solid;
+        box-shadow: inset 0 0 0 rgba($secondary-color, 0.6);
+        transform: translate3d(0, 30%, 0);
+        opacity: 0;
+        @include easeIn();
+        }
+
+      &:hover {
+          
+        .mybuttonoverlap { 
+            cursor: pointer;
+            transform: translate3d(0, -10%, 0);
+            opacity: 1;
+
+            &:hover {
+            box-shadow: inset 400px 0 0 0 rgba($secondary-color, 0.6);
+          }
+        }
+      }
+    }
+  
+  .job-1 {
+    grid-area: job1;
+    }
+  
+  .job-2 {
+    grid-area: job2;
+     }
+  
+  .job-3 {
+    grid-area: job3;
+    }
+}
+
+// projects page
+.projects {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    height: 200px;
+    border: 2px $secondary-color solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: darken($secondary-color, 20);
+      @include easeIn();
+    }
+  }
+
+  .btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover {
+      background: $secondary-color;
+      color: text-color($secondary-color);
+    }
+  }
+  
+  .btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: #fff;
+  }
+  
+  .btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: #333;
+  }
+}
+
+// contact page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  cursor: crosshair;
+
+  div {
+    font-size: 1.2rem;
+    border: 2px #cccccc solid;
+    padding: 1rem 1.3rem;
+    margin-bottom: 2rem;
+    @include easeIn();
+
+    &:hover {
+      padding: 0.8rem 1rem;
+      background: rgba($secondary-color, 0.2);
+      color: darken($secondary-color, 15);
+      span {
+        color: text-color($secondary-color);
+      }
+    }
+  }
+}
+
+
+@import 'resize';
