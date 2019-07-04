@@ -62,7 +62,7 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: rgba(darken($primary-color, 10), 0.9);
+        background: rgba(darken($primary-color, 10), 0.95);
         list-style: none;
         transform: translate3d(0, -100%, 0);
         @include easeIn;
@@ -122,6 +122,6 @@
 // delay the menu options 
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}) {
-        transition-delay: $x * 0.1s;
+        transition-delay: $x * 0.5s;
     }
 }

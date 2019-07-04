@@ -90,7 +90,7 @@ main {
       @include easeIn();
 
       &:hover {
-          background: #fafafa;
+          background: #fbfbfb;
           border-bottom: $secondary-color 3px solid;
       }
 
@@ -101,7 +101,7 @@ main {
         color: text-color($primary-color);
         border:  1px solid;
         box-shadow: inset 0 0 0 rgba($secondary-color, 0.6);
-        transform: translate3d(0, 30%, 0);
+        // transform: translate3d(0, -40%, 0);
         opacity: 0;
         @include easeIn();
         }
@@ -110,7 +110,7 @@ main {
           
         .mybuttonoverlap { 
             cursor: pointer;
-            transform: translate3d(0, -10%, 0);
+            // transform: translate3d(0, 0, 0);
             opacity: 1;
 
             &:hover {
