@@ -154,22 +154,17 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bio bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border: #55a3fc 1px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.2rem; }
   .about-info .job {
-    background: #fafafa;
+    background: #efefef;
     padding: 0.5rem;
-    box-shadow: 1px 1px 10px #cccccc;
     transition: all 0.4s ease-in; }
     .about-info .job:hover {
-      background: white;
+      background: #fafafa;
       border-bottom: #55a3fc 3px solid; }
     .about-info .job .mybuttonoverlap {
       position: inherit;
@@ -278,7 +273,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }

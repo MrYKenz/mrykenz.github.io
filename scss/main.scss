@@ -76,14 +76,8 @@ main {
 .about-info {
     display: grid; 
     grid-gap: 30px;
-    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+    grid-template-areas: 'bio bio bio' 'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr);
-  
-  .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border: $secondary-color 1px solid;
-  }
   
   .bio {
     grid-area: bio;
@@ -91,13 +85,12 @@ main {
   }
 
   .job {
-      background: darken($primary-color, 2);
+      background: #efefef;
       padding: 0.5rem;
-      box-shadow: 1px 1px 10px #cccccc;
       @include easeIn();
 
       &:hover {
-          background: lighten($primary-color, 1);
+          background: #fafafa;
           border-bottom: $secondary-color 3px solid;
       }
 
