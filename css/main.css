@@ -63,6 +63,9 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
+      background-color: rgba(20, 20, 20, 0.55);
+      border-radius: 20px;
+      padding: 10px 30px;
       color: #55a3fc; }
   .menu .nav-link {
     display: inline-block;
