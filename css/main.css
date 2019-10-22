@@ -228,7 +228,7 @@ main {
     background: white;
     color: #333; }
 
-.boxes {
+/* .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -246,7 +246,45 @@ main {
       background: rgba(85, 163, 252, 0.2);
       color: #0a7afb; }
       .boxes div:hover span {
-        color: #333333; }
+        color: #333333; } */
+        
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .container .box {
+    text-align: center;
+    font-size: 24px;
+  }
+  .container .box i {
+    cursor: pointer;
+    position: relative;
+    font-size: 62px;
+    margin: 5px;
+    color: #046ee7;
+  }
+  .container .box h3,
+  .container .box h4 {
+      color: #333;
+      padding:20px;
+      width:100%;
+      display: block;
+      background-image: linear-gradient(to left,
+                        transparent,
+                        transparent 50%,
+                        #00c6ff 50%,
+                        #6600a1);
+     background-position: 100% 0;
+     background-size: 200% 100%;
+     transition: all .25s ease-in;
+      
+}
+  .container .box .fa:hover ~ h4 {        
+      background-position: 0 0;
+      color:#fff;
+}
+
 
 @media screen and (min-width: 1501px) {
   .projects {
