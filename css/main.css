@@ -280,6 +280,9 @@ main {
      transition: all .25s ease-in;
       
 }
+  .container .box .fa:hover {        
+      color:#00c6ff;
+}
   .container .box .fa:hover ~ h4 {        
       background-position: 0 0;
       color:#fff;
