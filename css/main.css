@@ -39,14 +39,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: rgba(230, 230, 230, 0.9);
+    background: rgba(255, 255, 255, 0.8);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.4s ease-in; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(230, 230, 230, 0.75);
     transform: translate3d(0, 100%, 0);
     transition: all 0.4s ease-in; }
     .menu-branding.show {
